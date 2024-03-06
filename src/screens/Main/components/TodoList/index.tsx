@@ -50,7 +50,6 @@ const TodoList = () => {
         break;
     case 'completed':
         sortedData = sortByCompleted;
-      
        break;
     case 'name' : 
        sortedData = TaskByUserId.sort((a, b) => a.title.localeCompare(b.title))
