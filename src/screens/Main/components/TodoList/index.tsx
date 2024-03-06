@@ -49,14 +49,17 @@ const TodoList = () => {
       ); ;
         break;
     case 'completed':
-        sortedData = TaskByUserId.sort(({ completed: stateA = false }, { completed: stateB = false }) =>
-        Number(stateB) - Number(stateA));
-
+        sortedData = sortByCompleted;
+      
+       break;
     case 'name' : 
        sortedData = TaskByUserId.sort((a, b) => a.title.localeCompare(b.title))
     default:
         break;
   }
+  
+  console.log("completedData")
+  console.log(sortedData);
   return (
     <VStack flex={1} backgroundColor={"#F4F6F6"}>
       <HStack
